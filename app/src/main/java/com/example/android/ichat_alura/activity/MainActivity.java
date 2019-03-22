@@ -36,6 +36,7 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.Phaser;
 
 import javax.inject.Inject;
@@ -47,7 +48,7 @@ import retrofit2.Call;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final int idDoCliente = 1;
+    private final int idDoCliente = new Random().nextInt();
     private List<Mensagem> listaMensagem;
 
     @BindView(R.id.textoEnviar)
